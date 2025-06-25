@@ -1,0 +1,178 @@
+/* Theme Variables */
+:root.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --icon-filter: invert(0%);
+}
+
+:root.dark-mode {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+  --icon-filter: invert(100%);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: transparent;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: var(--text-color) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .btn {
+  transition: background-color 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 85vh;
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text .highlight {
+  color: #ffc107;
+}
+
+.hero-image {
+  position: relative;
+  width: fit-content;
+  margin-top: 2rem;
+}
+
+.yellow-blob-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: #ffeb00;
+  border-radius: 50% 60% 40% 70% / 60% 40% 60% 40%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  filter: blur(4px);
+}
+
+.profile-img {
+  position: relative;
+  z-index: 1;
+  max-width: 220px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Social Icons */
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  filter: var(--icon-filter);
+  transition: filter 0.3s ease;
+}
+
+/* About Section */
+.about-section {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.about-section .hand {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-on-hand {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.social-on-hand a img {
+  width: 28px;
+  height: 28px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  filter: var(--icon-filter);
+  transition: transform 0.3s ease;
+}
+
+.social-on-hand a:hover img {
+  transform: scale(1.1);
+}
+
+/* Decorative Backgrounds */
+.bg-yellow-right {
+  position: absolute;
+  top: 20%;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background-color: #ffe600;
+  border-radius: 58% 42% 40% 60% / 43% 55% 45% 57%;
+  z-index: 0;
+  opacity: 0.4;
+  filter: blur(3px);
+}
+
+.bg-gray-bottom {
+  position: absolute;
+  bottom: -80px;
+  left: 15%;
+  width: 180px;
+  height: 180px;
+  background-color: #c4c4c4;
+  border-radius: 60% 40% 60% 40%;
+  z-index: 0;
+  opacity: 0.3;
+  filter: blur(3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-on-hand {
+    left: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+
+  .yellow-blob-bg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-img {
+    max-width: 180px;
+  }
+}
