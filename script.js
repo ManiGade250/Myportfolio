@@ -1,5 +1,6 @@
 
 const themeToggle = document.getElementById("themeToggle");
+const paraElement1=document.getElementById("paraElement")
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
@@ -10,8 +11,14 @@ if (themeToggle) {
     root.classList.toggle("light-mode", isDark);
 
     themeToggle.textContent = isDark ? "🌙" : "☀️";
+    paraElement1.style.color="white"
+    
   });
+ 
 }
+ else{
+    paraElement1.style.color="black"
+  }
 
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -26,4 +33,5 @@ if (navCollapse && navLinks.length) {
     });
   });
 }
+
 
