@@ -1,7 +1,7 @@
 
 const themeToggle = document.getElementById("themeToggle");
 const paraElement1=document.getElementById("paraElement")
-
+const underlineEl=document.getElementById('underline')
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const root = document.documentElement;
@@ -12,12 +12,14 @@ if (themeToggle) {
 
     themeToggle.textContent = isDark ? "🌙" : "☀️";
     paraElement1.style.color="white"
+    underlineEl.style.color="white"
     
   });
  
 }
  else{
     paraElement1.style.color="black"
+    underlineEl.style.color="white"
   }
 
 
@@ -33,5 +35,6 @@ if (navCollapse && navLinks.length) {
     });
   });
 }
+
 
 
