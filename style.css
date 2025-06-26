@@ -1,4 +1,4 @@
-/* Theme Variables */
+
 :root.light-mode {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -22,7 +22,6 @@ a {
   text-decoration: none;
 }
 
-/* Navbar */
 .navbar {
   background-color: transparent;
 }
@@ -126,7 +125,7 @@ a {
   transform: scale(1.1);
 }
 
-/* Decorative Backgrounds */
+
 .bg-yellow-right {
   position: absolute;
   top: 20%;
@@ -153,7 +152,6 @@ a {
   filter: blur(3px);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
@@ -175,4 +173,7 @@ a {
   .profile-img {
     max-width: 180px;
   }
+}
+.para{
+  color: #000000;
 }
